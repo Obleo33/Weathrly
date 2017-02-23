@@ -1,9 +1,10 @@
 import { shallow, mount, render } from 'enzyme';
 import {expect, assert }          from 'chai';
 import React                      from 'react';
-import sinon from 'sinon';
-import Main from '../lib/components/Main';
-import Weathrly from '../lib/components/Weathrly';
+import sinon                      from 'sinon';
+import Main                       from '../lib/components/Main';
+import Weathrly                   from '../lib/components/Weathrly';
+import WeatherCards               from '../lib/components/WeatherCards';
 
 
 require ('locus')
@@ -67,25 +68,27 @@ describe('testing wif weathrly', () => {
     expect(stateOfWrapper.locationState).to.equal('bru')
   })
 
-  it('should simulate our submitBTN click event', () => {
+  it('should simulate submitBTN click event', () => {
     sinon.spy(Weathrly.prototype, 'submitLocation')
     const wrapper = mount(<Weathrly/>)
-    
+
     wrapper.find('#submit-btn').simulate('click')
+
     expect(Weathrly.prototype.submitLocation.calledOnce).to.equal(true)
   })
+
+  it.only('lets make sure our shit is rendering', () => {
+    const city     = {locationCity: 'denver'};
+    const forecast = {key: 'weather'}
+    const wrapper  = shallow(<WeatherCards city={city} weatherText={forecast} weatherSimple={forecast}/>)
+
+    console.log(wrapper.debug())
+
+
+  })
+
+
 })
 
 
 
-//
-//   it('lets make sure our shit is rendering', () => {
-//     const item      = [{id: 1, input: 'steam roller'}, {id: 2, input: 'suh'}]
-//     const wrapper   = shallow( <RenderList listItems={item} /> )
-//     let {id, input} = wrapper.find('Item').get(1).props
-//     console.log(id)
-//
-//     expect(wrapper.find('Item').length).to.equal(2)
-//     expect(wrapper.find('Item').get(1).props.id).to.equal(id)
-//     expect(wrapper.find('Item').get(1).props.input).to.equal(input)
-// })
