@@ -9,8 +9,16 @@ global.document = require('jsdom').jsdom(
 )
 
 
+
+
 global.window    = document.defaultView;
 global.navigator = window.navigator;
 
+if(!global.window.localStorage){
+  localStorage = {
+    getItem() {return '[]' ;},
+    setItem() {}
+  }
+}
 
 

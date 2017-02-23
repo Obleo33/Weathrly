@@ -1,6 +1,7 @@
 import { shallow, mount, render } from 'enzyme';
 import {expect, assert }          from 'chai';
 import React                      from 'react';
+import sinon from 'sinon';
 import Main from '../lib/components/Main';
 import Weathrly from '../lib/components/Weathrly';
 
@@ -66,24 +67,18 @@ describe('testing wif weathrly', () => {
     expect(stateOfWrapper.locationState).to.equal('bru')
   })
 
-  it('should populate our simpleforecast on click event', () => {
-    const wrapper    = shallow(<Weathrly />);
-    const inputCity  = wrapper.find('#input-city');
-    const inputState = wrapper.find('#input-state');
-    const submitBtn  = wrapper.find('#submitBtn')
-
-    inputCity.simulate('change', { target: { value: 'denver' }})
-    inputState.simulate('change', { target: { value: 'CO' }})
-    // console.log(submitBtn.simulate('click'))
-
-
-
-
+  it('should simulate our submitBTN click event', () => {
+    sinon.spy(Weathrly.prototype, 'submitLocation')
+    const wrapper = mount(<Weathrly/>)
+    
+    wrapper.find('#submit-btn').simulate('click')
+    expect(Weathrly.prototype.submitLocation.calledOnce).to.equal(true)
   })
 })
 
 
 
+//
 //   it('lets make sure our shit is rendering', () => {
 //     const item      = [{id: 1, input: 'steam roller'}, {id: 2, input: 'suh'}]
 //     const wrapper   = shallow( <RenderList listItems={item} /> )
