@@ -66,7 +66,7 @@ describe('testing wif weathrly', () => {
     expect(stateOfWrapper.locationState).to.equal('bru')
   })
 
-  it.only('should populate our simpleforecast on click event', () => {
+  it('should populate our simpleforecast on click event', () => {
     const wrapper    = shallow(<Weathrly />);
     const inputCity  = wrapper.find('#inputCity');
     const inputState = wrapper.find('#inputState');
