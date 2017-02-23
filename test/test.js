@@ -48,7 +48,7 @@ describe('testing wif weathrly', () => {
 
   it('should change locationCity state with a change of the city input ', () => {
     const wrapper   = shallow(<Weathrly />);
-    const inputCity = wrapper.find('#inputCity');
+    const inputCity = wrapper.find('#input-city');
 
     inputCity.simulate('change', { target: { value: 'suh' }})
 
@@ -58,7 +58,7 @@ describe('testing wif weathrly', () => {
 
   it('should change locationCity state with a change of the city input ', () => {
     const wrapper    = shallow(<Weathrly />);
-    const inputState = wrapper.find('#inputState');
+    const inputState = wrapper.find('#input-state');
 
     inputState.simulate('change', { target: { value: 'bru' }})
 
@@ -68,8 +68,8 @@ describe('testing wif weathrly', () => {
 
   it('should populate our simpleforecast on click event', () => {
     const wrapper    = shallow(<Weathrly />);
-    const inputCity  = wrapper.find('#inputCity');
-    const inputState = wrapper.find('#inputState');
+    const inputCity  = wrapper.find('#input-city');
+    const inputState = wrapper.find('#input-state');
     const submitBtn  = wrapper.find('#submitBtn')
 
     inputCity.simulate('change', { target: { value: 'denver' }})
