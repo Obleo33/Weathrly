@@ -1,4 +1,4 @@
-const data = {
+const Data = {
   location: {
     state: 'CO',
     city: 'Denver',
@@ -6,7 +6,6 @@ const data = {
   },
   forecast: {
     txt_forecast: {
-    date: '10:37 AM MST',
       forecastday: [
         {
           period: 0,
@@ -452,3 +451,5 @@ const data = {
     }
   ]
 }
+
+export default Data;

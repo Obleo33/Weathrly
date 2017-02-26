@@ -5,6 +5,7 @@ import sinon                      from 'sinon';
 import Main                       from '../lib/components/Main';
 import Weathrly                   from '../lib/components/Weathrly';
 import WeatherCards               from '../lib/components/WeatherCards';
+import Data                       from './helpers/mock-api-data'
 
 
 require ('locus')
@@ -78,11 +79,24 @@ describe('testing wif weathrly', () => {
   })
 
   it.only('lets make sure our shit is rendering', () => {
-    const city     = {locationCity: 'denver'};
-    const forecast = {key: 'weather'}
-    const wrapper  = shallow(<WeatherCards city={city} weatherText={forecast} weatherSimple={forecast}/>)
+    const weathrly   = shallow(<Weathrly />)
+    const inputCity = weathrly.find('#input-city');
+    inputCity.simulate('change', {target: {value: '80202'}})
 
-    console.log(wrapper.debug())
+    const Wrapper  = shallow(<WeatherCards location={Data.location} conditions={Data} weatherText={Data.forecast.txt_forecast.forecastday[0]} />)
+
+    console.log(Wrapper.debug())
+
+
+
+
 
   })
 })
+
+
+
+
+
+
+
