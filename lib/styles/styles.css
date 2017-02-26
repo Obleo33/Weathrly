@@ -14,7 +14,7 @@ body {
   border: 1px lightgray solid;
 }
 
-.forcast-today {
+.forecast-today {
   display: flex;
   flex-direction: column;
 
