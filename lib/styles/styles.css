@@ -107,8 +107,22 @@ body {
 }
 
 #submit-btn {
-  border: 1px solid red;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
 }
+
+#submit-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+#submit-btn:disabled {
+  color: black;
+  background-color: white;
+  cursor: not-allowed;
+}
+
 
 .hourly-container {
   display: flex;
@@ -132,6 +146,8 @@ body {
 
 .ten-day-container {
   display: flex;
+  width: 350px;
+  overflow: scroll;
 }
 
 .ten-day-card {
@@ -145,8 +161,7 @@ body {
 }
 
 .ten-day {
-  padding-top: 20px;
-
+  text-align: center;
   border: 1px lightgrey solid;
 }
 
@@ -160,15 +175,14 @@ body {
 
 .ten-day-high-low {
   display: flex;
-
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
+.ten-day-low,
 .ten-day-high {
-  width: 50%;
-}
-
-.ten-day-low {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
 }
