@@ -3,12 +3,14 @@
 body {
   font-family: 'Teko', sans-serif;
   font-weight: 700;
+  background-color: black;
+  color: lightgray;
 }
 
 .today {
   text-align: center;
 
-  border: 1px black solid;
+  border: 1px lightgray solid;
 }
 
 .forcast-today {
@@ -80,6 +82,7 @@ body {
 .hi-low {
   display: flex;
 
+  font-size: 30px;
   font-weight: 300;
 }
 
@@ -103,4 +106,24 @@ body {
 
 #submit-btn{
   border: 1px solid red;
+}
+
+
+.hourly-container {
+  display: flex;
+}
+
+.hourly {
+  border: 1px lightgrey solid;
+  height: 33.3%;
+  padding-top: 5px;
+}
+
+.hourly-card {
+  margin: 0 10px;
+  width : 100px;
+}
+
+.hourly-img {
+  border: none;
 }
