@@ -86,7 +86,7 @@ describe('testing wif weathrly', () => {
                                 conditions={Data.current_observation}
                                 notFound={null} />)
 
-      expect(wrapper.find('.forcast-today').length).to.equal(1)
+      expect(wrapper.find('.forecast-today').length).to.equal(1)
       expect(wrapper.find('.today').length).to.equal(10)
   })
 
