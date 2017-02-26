@@ -31,13 +31,13 @@ body {
 }
 
 .city {
-  width: 85%;
+  width: 80%;
 
   font-size: 40px;
 }
 
 .state {
-  width: 15%;
+  width: 20%;
 
   font-size: 40px;
 }
@@ -91,6 +91,14 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   font-weight: 100;
+  line-height: 2;
+}
+
+.condition-summary {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 1.75;
 }
 
 #submit-btn{
