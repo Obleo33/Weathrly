@@ -84,11 +84,5 @@ describe('testing wif weathrly', () => {
 
     console.log(wrapper.debug())
 
-
   })
-
-
 })
-
-
-
