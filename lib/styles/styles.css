@@ -1,9 +1,130 @@
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400|Teko:300,700);
 
 body {
-  background-color: #CCCCFF;
+  font-family: 'Teko', sans-serif;
+  font-weight: 700;
+  background-color: black;
+  color: lightgray;
+}
+
+.today {
+  text-align: center;
+
+  border: 1px lightgray solid;
+}
+
+.forcast-today {
+  display: flex;
+  flex-direction: column;
+
+  width: 350px;
+}
+
+.location {
+  display: flex;
+
+  height: 20%;
+
+  line-height: .9;
+}
+
+.location-today {
+  padding-top: 5px;
+}
+
+.city {
+  width: 80%;
+
+  font-size: 40px;
+}
+
+.state {
+  width: 20%;
+
+  font-size: 40px;
+}
+
+.row-two {
+  width: 100%;
+}
+
+.cal {
+  display: flex;
+  flex-direction: row;
+
+  height: 20%;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.day {
+  width: 33.3%;
+}
+
+.month {
+  width: 33.3%;
+}
+
+.day-num {
+  width: 33.3%;
+}
+
+.temp {
+  padding-top: 25px;
+
+  font-size: 150px;
+  font-weight: 700;
+  line-height: .65;
+}
+
+.hi-low {
+  display: flex;
+
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.temp-high, .temp-low {
+  width: 50%;
+}
+
+.condition {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 2;
+}
+
+.condition-summary {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 1.75;
 }
 
 #submit-btn {
   border: 1px solid red;
+}
+
+
+.hourly-container {
+  display: flex;
+}
+
+.hourly {
+  border: 1px lightgrey solid;
+  height: 33.3%;
+  padding-top: 5px;
+}
+
+.hourly-card {
+  margin: 0 10px;
+  width : 100px;
+}
+
+.hourly-img {
+  border: none;
 }
