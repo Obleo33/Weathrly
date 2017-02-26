@@ -1,4 +1,7 @@
 const data = {
+  current_observation: {
+    temp_f: 41
+  },
   location: {
     state: 'CO',
     city: 'Denver',
@@ -6,7 +9,7 @@ const data = {
   },
   forecast: {
     txt_forecast: {
-    date: '10:37 AM MST',
+      date: '10:37 AM MST',
       forecastday: [
         {
           period: 0,
