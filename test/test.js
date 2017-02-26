@@ -5,6 +5,9 @@ import sinon                      from 'sinon';
 import Main                       from '../lib/components/Main';
 import Weathrly                   from '../lib/components/Weathrly';
 import WeatherCards               from '../lib/components/WeatherCards';
+import TenDay                     from '../lib/components/TenDay';
+import Hourly                     from '../lib/components/Hourly';
+import Data                       from './helpers/mock-api-data'
 
 
 require ('locus')
@@ -77,12 +80,41 @@ describe('testing wif weathrly', () => {
     expect(Weathrly.prototype.submitLocation.calledOnce).to.equal(true)
   })
 
-  it.only('lets make sure our shit is rendering', () => {
-    const city     = {locationCity: 'denver'};
-    const forecast = {key: 'weather'}
-    const wrapper  = shallow(<WeatherCards city={city} weatherText={forecast} weatherSimple={forecast}/>)
+  it.only('lets make sure our WeatherCards component is rendering', () => {
+    const wrapper  = shallow(<WeatherCards
+                                location={Data.location} weatherText={Data.forecast.txt_forecast} weatherSimple={Data.forecast.simpleforecast}
+                                conditions={Data.current_observation}
+                                notFound={null} />)
 
-    console.log(wrapper.debug())
+      expect(wrapper.find('.forecast-today').length).to.equal(1)
+      expect(wrapper.find('.today').length).to.equal(10)
+  })
 
+  it('our TenDay component should render', () => {
+    const wrapper  = shallow(<TenDay
+                                weatherText={Data.forecast.txt_forecast} weatherSimple={Data.forecast.simpleforecast}
+                                notFound={null} />)
+
+    expect(wrapper.find('.ten-day-card').length).to.equal(10)
+    expect(wrapper.find('.ten-day-high').length).to.equal(10)
+    expect(wrapper.find('.ten-day-low').length).to.equal(10)
+  })
+
+  it('our Hourly component should render', () => {
+    const wrapper  = shallow(<Hourly
+                                weatherHourly={Data.hourly_forecast}
+                                notFound={null} />)
+
+    expect(wrapper.find('.hourly-card').length).to.equal(7)
+    expect(wrapper.find('.hourly-temp').length).to.equal(7)
+    expect(wrapper.find('.hourly-hour').length).to.equal(7)
+    expect(wrapper.find('.hourly-img').length).to.equal(7)
   })
 })
+
+
+
+
+
+
+
