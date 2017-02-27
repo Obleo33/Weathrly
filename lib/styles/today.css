@@ -1,17 +1,20 @@
 .today {
   text-align: center;
+
   border: 1px lightgray solid;
 }
 
 .forecast-today {
   display: flex;
   flex-direction: column;
+
   width: 320px;
   margin: 15px auto 30px;
 }
 
 .location {
   display: flex;
+
   line-height: .9;
 }
 
@@ -21,11 +24,13 @@
 
 .city {
   width: 80%;
+
   font-size: 40px;
 }
 
 .state {
   width: 20%;
+
   font-size: 40px;
 }
 
@@ -36,6 +41,7 @@
 .cal {
   display: flex;
   flex-direction: row;
+
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 1.5;
@@ -55,6 +61,7 @@
 
 .temp {
   padding-top: 25px;
+
   font-size: 120px;
   font-weight: 700;
   line-height: .65;
@@ -62,6 +69,7 @@
 
 .hi-low {
   display: flex;
+
   font-size: 30px;
   font-weight: 300;
 }
@@ -79,9 +87,10 @@
 }
 
 .condition-summary {
+  padding: 5px 10px;
+
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 100;
   line-height: 1.75;
-  padding: 5px 10px;
 }
