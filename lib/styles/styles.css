@@ -2,6 +2,7 @@
 @import 'hourly';
 @import 'ten-day';
 @import 'today';
+@import 'navbar';
 
 body {
   display: flex;
@@ -15,24 +16,7 @@ body {
   justify-content: center;
 }
 
-/*loction submit*/
-#submit-btn {
-  color: black;
-  border: 2px solid black;
-  background-color: lightgray;
-}
 
-#submit-btn:hover {
-  color: lightgray;
-  background-color: black;
-}
-
-#submit-btn:disabled {
-  cursor: not-allowed;
-
-  color: black;
-  background-color: lightgray;
-}
 
 ::-webkit-scrollbar  {
     background-color: lightgray;
