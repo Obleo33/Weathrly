@@ -1,0 +1,31 @@
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+.inputs {
+  margin-bottom: 10px;
+}
+
+#submit-btn {
+  color: black;
+  background-color: #ccccff;
+  border: none;
+}
+
+#submit-btn:hover {
+  color: lightgray;
+  background-color: black;
+}
+
+#submit-btn:disabled {
+  cursor: not-allowed;
+  color: black;
+  background-color: white;
+}
+
+.welcome{
+  text-align: center;
+}
+
