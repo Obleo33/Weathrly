@@ -48,7 +48,6 @@ body {
   }
 
   .ten-day {
-    width: 100%;
     border: none;
   }
 
@@ -65,6 +64,7 @@ body {
   /*margin: auto;*/
   overflow-x: visible !important;
   overflow-y: visible !important;
+  margin-top: 20px;
 }
 
   #more-detail {
