@@ -1,6 +1,7 @@
 .nav-bar {
   display: flex;
   flex-direction: column;
+
   width: 320px;
 }
 
@@ -10,8 +11,8 @@
 
 #submit-btn {
   color: black;
-  background-color: #ccccff;
   border: none;
+  background-color: #ccccff;
 }
 
 #submit-btn:hover {
@@ -21,6 +22,7 @@
 
 #submit-btn:disabled {
   cursor: not-allowed;
+
   color: black;
   background-color: white;
 }
@@ -28,4 +30,3 @@
 .welcome{
   text-align: center;
 }
-
