@@ -116,7 +116,16 @@ describe('testing TenDay component', () => {
       expect(wrapper.find('.ten-day-high').length).to.equal(10)
       expect(wrapper.find('.ten-day-low').length).to.equal(10)
     })
-  })
+
+  it('our TenDay component should not render if it isnt passed the Data', () => {
+    const wrapper  = shallow( <TenDay
+                                weatherText={''}
+                                weatherSimple={''}
+                                notFound={Data.response.error.description}/>)
+      console.log(wrapper.debug())
+      expect(wrapper.find('.ten-day-card').length).to.equal(0)
+    })
+})
 
 describe('testing Hourly component', () => {
   it('our Hourly component should render', () => {
@@ -129,4 +138,4 @@ describe('testing Hourly component', () => {
       expect(wrapper.find('.hourly-hour').length).to.equal(7)
       expect(wrapper.find('.hourly-img').length).to.equal(7)
     })
-  })
+})
