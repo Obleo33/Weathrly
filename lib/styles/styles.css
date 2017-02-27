@@ -33,3 +33,42 @@ body {
     border-radius: 3.5px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
+
+
+@media (min-width: 700px) {
+
+  #application {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #forecast {
+    display: flex;
+  }
+
+  .forecast-today {
+    margin: auto 10px !important;
+  }
+
+  #search{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  #more-detail {
+    margin-left: 30px;
+  }
+
+  .hourly-container {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+  }
+
+  .ten-day-container {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+  }
+
+}
