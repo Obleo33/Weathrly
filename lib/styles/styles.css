@@ -14,8 +14,7 @@ body {
 }
 
 ::-webkit-scrollbar  {
-  background-color: lightgray;
-  height: 7px;
+    height: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -84,21 +83,12 @@ body {
     text-align: center;
   }
 
-  .welcome {
-    justify-content: center;
-  }
 
-  #more-detail {
-  }
-
-  .hourly-container {
+  .ten-day-container {
     overflow-x: visible !important;
     overflow-y: visible !important;
-    display: flex;
-    width: 320px;
-    justify-content: center;
-
   }
+
 
 
 }
