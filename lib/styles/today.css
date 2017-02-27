@@ -15,8 +15,6 @@
 .location {
   display: flex;
 
-  height: 20%;
-
   line-height: .9;
 }
 
@@ -43,8 +41,6 @@
 .cal {
   display: flex;
   flex-direction: row;
-
-  height: 20%;
 
   font-family: 'Roboto', sans-serif;
   font-weight: 300;

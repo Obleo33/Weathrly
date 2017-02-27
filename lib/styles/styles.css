@@ -37,13 +37,17 @@ body {
 
 @media (min-width: 700px) {
 
+  #application {
+    width: 100vw;
+    height: 100vh;
+  }
+
   #forecast {
     display: flex;
-    flex-direction: row;
   }
 
   .forecast-today {
-      margin: none;
+    margin: auto 10px !important;
   }
 
   #search{
@@ -56,4 +60,15 @@ body {
   #more-detail {
     margin-left: 30px;
   }
+
+  .hourly-container {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+  }
+
+  .ten-day-container {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+  }
+
 }
