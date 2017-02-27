@@ -11,7 +11,7 @@ import Data                       from './helpers/mock-api-data';
 import NavBar                     from '../lib/components/NavBar';
 require ('locus')
 
-describe('testing weathrly', () => {
+describe('testing Weathrly', () => {
   it('Main should contain a component called Weathrly', () => {
     const wrapper = shallow( <Main /> )
     expect(wrapper.find('Weathrly')).to.have.length(1)
@@ -25,6 +25,16 @@ describe('testing weathrly', () => {
   it('Weathrly should contain a component called NavBar', () => {
     const wrapper = shallow( <Weathrly /> )
     expect(wrapper.find('NavBar')).to.have.length(1)
+  })
+
+  it('Weathrly should contain a component called Hourly', () => {
+    const wrapper = shallow( <Weathrly /> )
+    expect(wrapper.find('Hourly')).to.have.length(1)
+  })
+
+  it('Weathrly should contain a component called TenDay', () => {
+    const wrapper = shallow( <Weathrly /> )
+    expect(wrapper.find('TenDay')).to.have.length(1)
   })
 
   it('Weathrly should have a default state weatherText that is an empty object ', () => {
@@ -41,6 +51,27 @@ describe('testing weathrly', () => {
     expect(stateOfWrapper.weatherSimple).to.deep.equal({})
   })
 
+  it('Weathrly should have a default state weatherHourly that is an empty array ', () => {
+    const wrapper        = shallow( <Weathrly /> );
+    const stateOfWrapper = wrapper.state();
+
+    expect(stateOfWrapper.weatherHourly).to.deep.equal([])
+  })
+
+  it('Weathrly should have a default state locationData that is an empty object ', () => {
+    const wrapper        = shallow( <Weathrly /> );
+    const stateOfWrapper = wrapper.state();
+
+    expect(stateOfWrapper.locationData).to.deep.equal({})
+  })
+
+  it('Weathrly should have a default state conditions that is an empty object ', () => {
+    const wrapper        = shallow( <Weathrly /> );
+    const stateOfWrapper = wrapper.state();
+
+    expect(stateOfWrapper.conditions).to.deep.equal({})
+  })
+
   it('should simulate submitBTN click event', () => {
     sinon.spy(Weathrly.prototype, 'submitLocation')
     const wrapper = mount( <Weathrly/> )
@@ -49,7 +80,9 @@ describe('testing weathrly', () => {
 
     expect(Weathrly.prototype.submitLocation.calledOnce).to.equal(true)
   })
+})
 
+describe('testing WeatherCards component', () => {
   it('lets make sure our WeatherCards component is rendering', () => {
     const wrapper  = shallow( <WeatherCards
                                 location={Data.location}
@@ -58,8 +91,19 @@ describe('testing weathrly', () => {
                                 conditions={Data.current_observation}
                                 notFound={null} /> )
 
-      expect(wrapper.find('.forecast-today').length).to.equal(1)
-      expect(wrapper.find('.today').length).to.equal(10)
+    expect(wrapper.find('.forecast-today').length).to.equal(1)
+    expect(wrapper.find('.today').length).to.equal(10)
+  })
+
+  it('WeatherCards should not render if it is passed notFound', () => {
+    const wrapper  = shallow( <WeatherCards
+                                location={''}
+                                weatherText={''}
+                                weatherSimple={''}
+                                conditions={''}
+                                notFound={Data.response.error.description} /> )
+
+    expect(wrapper.find('.forecast-today').length).to.equal(0)
   })
 })
 
@@ -112,18 +156,19 @@ describe('testing TenDay component', () => {
                                 weatherSimple={Data.forecast.simpleforecast}
                                 notFound={null} /> )
 
-      expect(wrapper.find('.ten-day-card').length).to.equal(10)
-      expect(wrapper.find('.ten-day-high').length).to.equal(10)
-      expect(wrapper.find('.ten-day-low').length).to.equal(10)
-    })
+    expect(wrapper.find('.ten-day-card').length).to.equal(10)
+    expect(wrapper.find('.ten-day-high').length).to.equal(10)
+    expect(wrapper.find('.ten-day-low').length).to.equal(10)
+  })
 
-  it('our TenDay component should not render if it isnt passed the Data', () => {
+  it('our TenDay component should not render if it is passed notFound', () => {
     const wrapper  = shallow( <TenDay
                                 weatherText={''}
                                 weatherSimple={''}
                                 notFound={Data.response.error.description}/>)
-      expect(wrapper.find('.ten-day-card').length).to.equal(0)
-    })
+
+    expect(wrapper.find('.ten-day-card').length).to.equal(0)
+  })
 })
 
 describe('testing Hourly component', () => {
@@ -132,9 +177,24 @@ describe('testing Hourly component', () => {
                                 weatherHourly={Data.hourly_forecast}
                                 notFound={null} /> )
 
-      expect(wrapper.find('.hourly-card').length).to.equal(7)
-      expect(wrapper.find('.hourly-temp').length).to.equal(7)
-      expect(wrapper.find('.hourly-hour').length).to.equal(7)
-      expect(wrapper.find('.hourly-img').length).to.equal(7)
-    })
+    expect(wrapper.find('.hourly-card').length).to.equal(7)
+    expect(wrapper.find('.hourly-temp').length).to.equal(7)
+    expect(wrapper.find('.hourly-hour').length).to.equal(7)
+    expect(wrapper.find('.hourly-img').length).to.equal(7)
+  })
+
+  it('our Hourly component should not render if passed notFound', () => {
+    const wrapper  = shallow( <Hourly
+                                weatherHourly={''}
+                                notFound={Data.response.error.description} /> )
+
+    expect(wrapper.find('.hourly-card').length).to.equal(0)
+    expect(wrapper.find('.hourly-temp').length).to.equal(0)
+    expect(wrapper.find('.hourly-hour').length).to.equal(0)
+    expect(wrapper.find('.hourly-img').length).to.equal(0)
+  })
 })
+
+
+
+
