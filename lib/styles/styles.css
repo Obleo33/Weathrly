@@ -171,23 +171,28 @@ body {
 }
 
 .ten-day-card {
-  width : 100px;
-  height: 250px;
   margin: 15px 10px;
-}
-
-.ten-row {
-  height: 33.3%;
 }
 
 .ten-day {
   text-align: center;
-
+  width: 100%;
   border: 1px lightgrey solid;
+}
+
+.ten-day-day-container {
+  border: none;
+  width: 100px;
+  margin-bottom: 7px;
 }
 
 .ten-day-day {
   font-size: 30px;
+}
+
+.ten-day-day-detail {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .ten-day-img-container {
@@ -199,19 +204,12 @@ body {
   border: none;
 }
 
-.ten-day-high-low {
-  display: flex;
-
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-}
-
 .ten-day-low,
 .ten-day-high {
-  display: flex;
-
-  width: 50%;
-
+  height: 30px;
+  padding-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
   justify-content: center;
   align-items: center;
 }
