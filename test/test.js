@@ -52,11 +52,11 @@ describe('testing weathrly', () => {
 
   it('lets make sure our WeatherCards component is rendering', () => {
     const wrapper  = shallow( <WeatherCards
-      location={Data.location}
-      weatherText={Data.forecast.txt_forecast}
-      weatherSimple={Data.forecast.simpleforecast}
-      conditions={Data.current_observation}
-      notFound={null} /> )
+                                location={Data.location}
+                                weatherText={Data.forecast.txt_forecast}
+                                weatherSimple={Data.forecast.simpleforecast}
+                                conditions={Data.current_observation}
+                                notFound={null} /> )
 
       expect(wrapper.find('.forecast-today').length).to.equal(1)
       expect(wrapper.find('.today').length).to.equal(10)
@@ -108,25 +108,33 @@ describe('testing NavBar component', () => {
 describe('testing TenDay component', () => {
   it('our TenDay component should render', () => {
     const wrapper  = shallow( <TenDay
-      weatherText={Data.forecast.txt_forecast}
-      weatherSimple={Data.forecast.simpleforecast}
-      notFound={null} /> )
+                                weatherText={Data.forecast.txt_forecast}
+                                weatherSimple={Data.forecast.simpleforecast}
+                                notFound={null} /> )
 
       expect(wrapper.find('.ten-day-card').length).to.equal(10)
       expect(wrapper.find('.ten-day-high').length).to.equal(10)
       expect(wrapper.find('.ten-day-low').length).to.equal(10)
     })
-  })
+
+  it('our TenDay component should not render if it isnt passed the Data', () => {
+    const wrapper  = shallow( <TenDay
+                                weatherText={''}
+                                weatherSimple={''}
+                                notFound={Data.response.error.description}/>)
+      expect(wrapper.find('.ten-day-card').length).to.equal(0)
+    })
+})
 
 describe('testing Hourly component', () => {
   it('our Hourly component should render', () => {
     const wrapper  = shallow( <Hourly
-      weatherHourly={Data.hourly_forecast}
-      notFound={null} /> )
+                                weatherHourly={Data.hourly_forecast}
+                                notFound={null} /> )
 
       expect(wrapper.find('.hourly-card').length).to.equal(7)
       expect(wrapper.find('.hourly-temp').length).to.equal(7)
       expect(wrapper.find('.hourly-hour').length).to.equal(7)
       expect(wrapper.find('.hourly-img').length).to.equal(7)
     })
-  })
+})

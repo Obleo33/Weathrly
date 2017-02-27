@@ -7,6 +7,9 @@ const Data = {
     city: 'Denver',
     zip: '80201',
   },
+  response: {
+    error: 'error',
+  },
   forecast: {
     txt_forecast: {
       date: '10:37 AM MST',
