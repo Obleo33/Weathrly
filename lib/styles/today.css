@@ -1,0 +1,98 @@
+.today {
+  text-align: center;
+
+  border: 1px lightgray solid;
+}
+
+.forecast-today {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  margin: 30px 0;
+}
+
+.location {
+  display: flex;
+
+  height: 20%;
+
+  line-height: .9;
+}
+
+.location-today {
+  padding-top: 5px;
+}
+
+.city {
+  width: 80%;
+
+  font-size: 40px;
+}
+
+.state {
+  width: 20%;
+
+  font-size: 40px;
+}
+
+.row-two {
+  width: 100%;
+}
+
+.cal {
+  display: flex;
+  flex-direction: row;
+
+  height: 20%;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.day {
+  width: 33.3%;
+}
+
+.month {
+  width: 33.3%;
+}
+
+.day-num {
+  width: 33.3%;
+}
+
+.temp {
+  padding-top: 25px;
+
+  font-size: 120px;
+  font-weight: 700;
+  line-height: .65;
+}
+
+.hi-low {
+  display: flex;
+
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.temp-high, .temp-low {
+  width: 50%;
+}
+
+.condition {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 2;
+}
+
+.condition-summary {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 1.75;
+  padding: 5px 10px;
+}
