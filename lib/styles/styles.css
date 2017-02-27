@@ -1,13 +1,37 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,400|Teko:300,700);
 
 body {
+  display: flex;
+
   color: lightgray;
   background-color: black;
 
   font-family: 'Teko', sans-serif;
   font-weight: 700;
+
+  justify-content: center;
 }
 
+/*loction submit*/
+#submit-btn {
+  color: black;
+  border: 2px solid black;
+  background-color: lightgray;
+}
+
+#submit-btn:hover {
+  color: lightgray;
+  background-color: black;
+}
+
+#submit-btn:disabled {
+  cursor: not-allowed;
+
+  color: black;
+  background-color: lightgray;
+}
+
+/*condtions today section*/
 .today {
   text-align: center;
 
@@ -18,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  width: 350px;
+  width: 320px;
   margin: 30px 0;
 }
 
@@ -76,7 +100,7 @@ body {
 .temp {
   padding-top: 25px;
 
-  font-size: 150px;
+  font-size: 120px;
   font-weight: 700;
   line-height: .65;
 }
@@ -106,26 +130,13 @@ body {
   line-height: 1.75;
 }
 
-#submit-btn {
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-}
-
-#submit-btn:hover {
-  background-color: black;
-  color: white;
-}
-
-#submit-btn:disabled {
-  color: black;
-  background-color: white;
-  cursor: not-allowed;
-}
-
-
+/*hourly section*/
 .hourly-container {
   display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  width: 320px;
 }
 
 .hourly {
@@ -144,10 +155,13 @@ body {
   border: none;
 }
 
+/*ten-day section*/
 .ten-day-container {
   display: flex;
-  width: 350px;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  width: 320px;
 }
 
 .ten-day-card {
@@ -162,6 +176,7 @@ body {
 
 .ten-day {
   text-align: center;
+
   border: 1px lightgrey solid;
 }
 
@@ -175,6 +190,7 @@ body {
 
 .ten-day-high-low {
   display: flex;
+
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
@@ -182,7 +198,25 @@ body {
 .ten-day-low,
 .ten-day-high {
   display: flex;
+
+  width: 50%;
+
   justify-content: center;
   align-items: center;
-  width: 50%;
+}
+
+::-webkit-scrollbar  {
+    background-color: lightgray;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: pink;
+    border-radius: 3.5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
