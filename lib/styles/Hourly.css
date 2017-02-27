@@ -1,9 +1,8 @@
-.hourly-container {
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 320px;
+.hourly-title {
+  text-align: center;
+  font-size: 30px;
 }
+
 
 .hourly {
   font-size: 1.3em;
@@ -11,17 +10,20 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 33.3%;
+  height: 30px;
   border: 1px lightgrey solid;
 }
 
 .hourly-card {
-  width: 200px;
-  height: 200px;
-  margin: 0 20px 10px 0;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin: 10px 0;
 }
 
 .hourly-img-container {
+  height: 30px;
+  border: 1px lightgrey solid;
   text-align: center;
   background-color: lightgray;
 }
@@ -30,4 +32,10 @@
   border: none;
 }
 
+.hourly-hour {
+  width: 100px;
+}
 
+.hourly-temp {
+  width: 50px;
+}
