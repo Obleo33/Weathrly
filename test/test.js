@@ -122,7 +122,6 @@ describe('testing TenDay component', () => {
                                 weatherText={''}
                                 weatherSimple={''}
                                 notFound={Data.response.error.description}/>)
-      console.log(wrapper.debug())
       expect(wrapper.find('.ten-day-card').length).to.equal(0)
     })
 })
