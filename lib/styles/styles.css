@@ -6,35 +6,66 @@
 
 body {
   display: flex;
-
   color: lightgray;
   background-color: black;
-
   font-family: 'Teko', sans-serif;
   font-weight: 700;
-
   justify-content: center;
 }
-
-
 
 ::-webkit-scrollbar  {
     height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: pink;
-    border-radius: 3.5px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  background-color: pink;
+  border-radius: 3.5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
+@media screen and (min-width: 700px) {
 
-@media (min-width: 700px) {
+  .forecast-today {
+    width: 700px !important;
+  }
+
+  .ten-day-day-container {
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .ten-day {
+    border: none;
+  }
+
+  .ten-day-card {
+    margin: auto !important;
+    width: 40%;
+    border: 1px solid black;
+  }
+
+  .ten-day-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    margin-top: 20px;
+  }
+
+  #more-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 
   #search{
     display: flex;
@@ -42,12 +73,4 @@ body {
     width: 100%;
     text-align: center;
   }
-
-  .ten-day-container {
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-  }
-
-
-
 }
