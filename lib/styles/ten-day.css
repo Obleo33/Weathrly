@@ -1,0 +1,51 @@
+.ten-day-container {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  width: 320px;
+}
+
+.ten-day-card {
+  margin: 15px 20px 15px 0px;
+}
+
+.ten-day {
+  text-align: center;
+  width: 100%;
+  border: 1px lightgrey solid;
+}
+
+.ten-day-day-container {
+  border: none;
+  width: 100px;
+  margin-bottom: 7px;
+}
+
+.ten-day-day {
+  font-size: 30px;
+}
+
+.ten-day-day-detail {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ten-day-img-container {
+  text-align: center;
+  background-color: lightgray;
+}
+
+.ten-day-img {
+  border: none;
+}
+
+.ten-day-low,
+.ten-day-high {
+  height: 30px;
+  padding-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  justify-content: center;
+  align-items: center;
+}
