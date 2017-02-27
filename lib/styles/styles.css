@@ -147,8 +147,14 @@ body {
 }
 
 .hourly-card {
-  width : 100px;
-  margin: 30px 10px 15px;
+  width: 200px;
+  height: 200px;
+  margin: 30px 10px 40px;
+}
+
+.hourly-img-container {
+  text-align: center;
+  background-color: lightgray;
 }
 
 .hourly-img {
@@ -182,6 +188,11 @@ body {
 
 .ten-day-day {
   font-size: 30px;
+}
+
+.ten-day-img-container {
+  text-align: center;
+  background-color: lightgray;
 }
 
 .ten-day-img {
