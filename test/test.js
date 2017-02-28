@@ -141,6 +141,7 @@ describe('testing NavBar component', () => {
     const stateOfWrapper = wrapper.state()
     expect(stateOfWrapper.locationState).to.equal('bru')
   })
+  
   it('our NavBar component should render', () => {
     const wrapper  = shallow( <NavBar /> )
 
@@ -194,7 +195,3 @@ describe('testing Hourly component', () => {
     expect(wrapper.find('.hourly-img').length).to.equal(0)
   })
 })
-
-
-
-
