@@ -10,7 +10,7 @@ body {
   color: lightgray;
   background-color: black;
   background-image: url(https://image.freepik.com/free-vector/dark-background-with-a-geometric-design_1048-1454.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: center;
 
   font-family: 'Teko', sans-serif;
