@@ -35,7 +35,7 @@ body {
 }
 
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 820px) {
 
   .forecast-today {
     width: 700px !important;
@@ -91,3 +91,10 @@ body {
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .ten-day-card {
+    width: 25% !important;
+  }
+}
+
